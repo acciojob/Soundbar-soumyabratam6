@@ -1,1 +1,14 @@
 /*  your css code here. If applicable */
+.btn {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.stop {
+  background-color: #e74c3c;
+}
