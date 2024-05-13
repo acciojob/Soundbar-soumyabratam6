@@ -1,15 +1,3 @@
-//your JS code here. If required.
-// function playSound(soundFileName) {
-//   var audio = new Audio('sounds/' + soundFileName);
-//   audio.play();
-// }
-
-function stopAllSounds() {
-  var sounds = document.getElementsByTagName('audio');
-  for (var i = 0; i < sounds.length; i++) {
-    sounds[i].pause();
-    sounds[i].currentTime = 0;
-  }
 function playSound(soundName) {
   var audio = document.getElementById("audioPlayer");
   audio.src = "sounds/" + soundName;
@@ -21,3 +9,23 @@ function stopSound() {
   audio.pause();
   audio.currentTime = 0;
 }
+
+// Get all the sound buttons
+const buttons = document.querySelectorAll('.btn');
+
+// Add click event listeners to each button
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Get the name of the sound from the button's text
+        const soundName = button.innerText + '.mp3';
+
+        // Play the sound
+        playSound(soundName);
+    });
+});
+
+// Get the stop button
+const stopButton = document.querySelector('.stop');
+
+// Add a click event listener to the stop button
+stopButton.addEventListener('click', stopSound);
