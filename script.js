@@ -12,19 +12,18 @@ function stopAllSounds() {
   }
 // Get all the sound buttons
 const buttons = document.querySelectorAll('.btn');
-
+let audio = new Audio();
 // Add click event listeners to each button
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         // Get the name of the sound from the button's text
         const soundName = button.innerText;
 
-        // Create a new audio object and play the sound
-        const audio = new Audio(`sounds/${soundName}.mp3`); // replace .mp3 with the format of your sounds
+        // Update the src of the audio object and play the sound
+        audio.src = `sounds/${soundName}.mp3`; // replace .mp3 with the format of your sounds
         audio.play();
     });
 });
-
 // Get all the sound buttons
 const buttons = document.querySelectorAll('.btn');
 
