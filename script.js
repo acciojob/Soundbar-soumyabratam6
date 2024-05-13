@@ -1,8 +1,8 @@
 //your JS code here. If required.
-function playSound(soundFileName) {
-  var audio = new Audio('sounds/' + soundFileName);
-  audio.play();
-}
+// function playSound(soundFileName) {
+//   var audio = new Audio('sounds/' + soundFileName);
+//   audio.play();
+// }
 
 function stopAllSounds() {
   var sounds = document.getElementsByTagName('audio');
